@@ -32,7 +32,7 @@ plot4 = ggplot (data = diamonds, mapping = aes(x= depth, y=price)) +
 (plot1 + plot2 + plot3) / plot4
 
 
-## Le prix en fonction de la clareté
+## Price depending on Clarity
 ggplot (data = diamonds, mapping = aes(x= carat, y=price), main="Price = f(Clarity)") +
   labs(x="Diamond carat", y = "Price in US dollars") +
   geom_point(color="darkblue") +
