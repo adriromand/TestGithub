@@ -34,12 +34,27 @@ plot4 = ggplot (data = diamonds, mapping = aes(x= depth, y=price)) +
   
 (plot1 + plot2 + plot3) / plot4
 
+#Graphiquement, nous observons une corrélation positive à tendance linéaire entre
+#le prix du diamant et les dimensions du diamant prises de manière individuelle.
+#Cependant, la représentation graphoique de la profondeur totale du diamant ("depth"), 
+#qui est la profondeur rapportée à la moyenne de la longueur de et de la largeur,
+#ne montre pas de corrélation positive évidente. 
+# Il est alors possible qu'un diamant aux dimensions soit valorisé par un prix plus élevé
+# ou bien que d'autres facteurs associés influencent la définition de ce prix. 
 
-## Price depending on Clarity
-ggplot (data = diamonds, mapping = aes(x= carat, y=price), main="Price = f(Clarity)") +
+
+
+## Price depending on Carat
+ggplot (data = diamonds, mapping = aes(x= carat, y=price), main="Price = f(Caraty)") +
   labs(x="Diamond carat", y = "Price in US dollars") +
   geom_point(color="darkblue") +
   geom_density_2d(color="lightgrey")
+
+#Graphiquement, il semble y avoir une corrélation positive à tendance linéaire entre 
+# le nombre de carats du diamant et son prix. 
+# De plus, avec l'indice de densité de l'échantillonnage, nous observons que l'apparition
+#d'un nombre de carats croissant et inverssement proportionnel à la fréquence d'apparition
+# de diamants. Autrement dit, il semble plus rare d'avoir un diamant avec un grand nombre de carats.
 
 
 ##Cut and Price - An artistic graph
