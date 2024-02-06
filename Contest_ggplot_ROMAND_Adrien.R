@@ -1,4 +1,7 @@
-#Faire un graphique avec la cheatsheet#
+#06/02/2024
+#ROMAND Adrien
+#Faire un graphique
+
 library(tidyverse)
 library(dplyr)
 data("diamonds")
