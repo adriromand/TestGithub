@@ -57,6 +57,16 @@ ggplot (data = diamonds, mapping = aes(x= carat, y=price), main="Price = f(Carat
 # de diamants. Autrement dit, il semble plus rare d'avoir un diamant avec un grand nombre de carats.
 
 
+
+## Comparaison entre couleur et coupe du diamant
+ggplot(data = diamonds, mapping = aes(x=cut, y=color)) +
+  geom_count(aes(color = after_stat(n)))
+#Nous obtenons un graphique croisé entre les deux variables.
+# + un rond est grand plus le nombre de diamant observé est grand
+# Et + la couleur du rond est claire + le nombre de diamant observé est grand
+
+
+
 ##Cut and Price - An artistic graph
 ggplot (data = diamonds, mapping = aes(x= cut, y=price),main="Price = f(cut)") +
   labs(x="Diamond cut quality", y = "Price in US dollars") +
